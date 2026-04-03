@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Details</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+}
+
+.card {
+  background: #1f2d45;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+h1 { color: #00cfff; }
+h2 { color: #00cfff; margin-bottom: 10px; }
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #00cfff;
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1 id="title"></h1>
+
+<div class="card">
+<h2>📌 Overview</h2>
+<p id="overview"></p>
+</div>
+
+<div class="card">
+<h2>🚀 Key Features</h2>
+<ul id="features"></ul>
+</div>
+
+<div class="card">
+<h2>⚙️ Workflow</h2>
+<ul id="flow"></ul>
+</div>
+
+<div class="card">
+<h2>💻 Technologies Used</h2>
+<p id="tech"></p>
+</div>
+
+<a href="index.html" class="back-btn">⬅ Back to Portfolio</a>
+
+</div>
+
+<script>
+const data = JSON.parse(localStorage.getItem("project"));
+
+document.getElementById("title").textContent = data.title;
+document.getElementById("overview").textContent = data.overview;
+document.getElementById("tech").textContent = data.tech;
+
+// Features
+data.features.forEach(item => {
+  let li = document.createElement("li");
+  li.textContent = item;
+  document.getElementById("features").appendChild(li);
+});
+
+// Flow
+data.flow.forEach(item => {
+  let li = document.createElement("li");
+  li.textContent = item;
+  document.getElementById("flow").appendChild(li);
+});
+</script>
+
+</body>
+</html>

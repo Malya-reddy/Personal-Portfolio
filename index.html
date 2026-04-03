@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malya Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<span class="logo-name">Port</span><span class="logo-portfolio">folio</span>
+</div>
+
+<nav>
+<ul class="nav-menu">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#portfolio">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-content">
+<div class="text">
+<p>Hello, I’m</p>
+<h1>Malya Reddy</h1>
+<h2>Web Developer | AI Enthusiast</h2>
+
+<p>I build AI-powered and modern web applications.</p>
+
+<div class="hero-buttons">
+<a href="Malya_resume.pdf" class="btn" target="_blank">View Resume</a>
+<a href="#contact" class="btn btn-outline">Contact Me</a>
+</div>
+</div>
+
+<div class="avatar">
+<img src="images/avatar.jpg">
+</div>
+</div>
+</section>
+
+<hr>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+<div class="about-container">
+<div class="about-image">
+<img src="images/me.png">
+</div>
+
+<div class="about-text">
+<h1>About Me</h1>
+<p>
+Hi! I'm <strong>Malya</strong>, a passionate and detail-oriented web developer with a strong interest in building responsive, scalable, and modern web applications. I specialize in technologies like HTML, CSS, Tailwind CSS, JavaScript, React.js, Node.js, Express.js, and Angular, enabling me to develop both frontend and full-stack solutions.
+
+I enjoy transforming ideas into intuitive and visually appealing user interfaces while ensuring performance, accessibility, and clean code practices. Along with web development, I have a growing interest in AI-driven applications, which allows me to integrate intelligent features into real-world projects.
+
+I am a continuous learner who actively explores new technologies, frameworks, and industry trends to stay updated and improve my skill set. My goal is to build impactful digital solutions and contribute effectively in a professional development environment.
+</p>
+</div>
+</div>
+</section>
+
+<hr>
+
+<!-- SKILLS -->
+<section class="knowlge" id="skills">
+<h1>Skills</h1>
+
+<div class="skills-radar">
+<ul>
+<li>Python</li>
+<li>Java</li>
+<li>JavaScript</li>
+<li>React</li>
+<li>SQL</li>
+<li>AI/ML</li>
+</ul>
+</div>
+</section>
+
+<hr>
+
+<!-- PROJECTS -->
+<section id="portfolio">
+<h1 style="text-align:center; color:#00cfff;">Projects</h1>
+
+<div class="projects">
+
+<!-- Traffic -->
+<div class="project-card">
+<img class="project-img" src="images/traffic.jpg">
+<div class="project-content">
+<div>
+<div class="project-title">Smart Traffic Monitor</div>
+<div class="project-desc">AI-based traffic violation detection using YOLOv8.</div>
+</div>
+
+<div>
+<button class="project-link" onclick="openProject(0)">View Project</button>
+<a href="https://github.com/Malya-reddy/Smart-Traffic-Monitor" target="_blank" class="project-link">Code</a>
+</div>
+</div>
+</div>
+
+<!-- Edu -->
+<div class="project-card">
+<img class="project-img" src="images/ai.jpg">
+<div class="project-content">
+<div>
+<div class="project-title">EduAdapt AI</div>
+<div class="project-desc">AI adaptive learning system using ML.</div>
+</div>
+
+<div>
+<button class="project-link" onclick="openProject(1)">View Project</button>
+<a href="https://github.com/Malya-reddy/EDUADAPT-AI" target="_blank" class="project-link">Code</a>
+</div>
+</div>
+</div>
+
+<!-- House -->
+<div class="project-card">
+<img class="project-img" src="images/house.jpg">
+<div class="project-content">
+<div>
+<div class="project-title">HouseHunt</div>
+<div class="project-desc">House searching web app with filtering.</div>
+</div>
+
+<div>
+<button class="project-link" onclick="openProject(2)">View Project</button>
+<a href="https://github.com/Malya-reddy/HouseHunt" target="_blank" class="project-link">Code</a>
+</div>
+</div>
+</div>
+
+<!-- SRIT -->
+<div class="project-card">
+<img class="project-img" src="images/srit.jpg">
+<div class="project-content">
+<div>
+<div class="project-title">SRIT Clone</div>
+<div class="project-desc">Responsive SRIT website clone.</div>
+</div>
+
+<div>
+<button class="project-link" onclick="openProject(3)">View Project</button>
+<a href="https://github.com/Malya-reddy/srit-clone-website" target="_blank" class="project-link">Code</a>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<hr>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+<h1>Contact Me</h1>
+
+<div class="info-box">
+<i class="fas fa-envelope"></i> malyareddy646@gmail.com
+</div>
+
+<div class="info-box">
+<i class="fas fa-phone"></i> +91 9441226634
+</div>
+</section>
+
+<!-- CHATBOT -->
+<div class="chatbot">
+<div class="chat-header" onclick="toggleChat()">Chat 🤖</div>
+
+<div class="chat-body" id="chatBody">
+<div id="messages"></div>
+<input type="text" id="userInput" placeholder="Ask me..." onkeypress="handleKey(event)">
+</div>
+</div>
+
+<script src="project.js"></script>
+<script src="script.js"></script>
+
+<hr>
+  <footer class="footer">
+  <div class="footer-container">
+    <p>&copy; 2025 <span class="brand">Malya</span>. All rights reserved.</p>
+    <div class="footer-social">
+      <a href="https://github.com/Malya-reddy" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/malya-reddy/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
